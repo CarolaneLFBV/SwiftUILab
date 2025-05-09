@@ -8,7 +8,7 @@
 import SwiftUI
 
 enum WrapperExample: String, CaseIterable, Identifiable {
-    case clamped, trimmed, capitalized, logged
+    case clamped, trimmed, capitalized, logged, email
 
     var id: String { self.rawValue }
 }
@@ -37,6 +37,8 @@ struct ContentView: View {
                 CapitalizedExampleView()
             case .logged:
                 LoggedExampleView()
+            case .email:
+                ValidatedEmailExampleView()
             }
 
             Spacer()
